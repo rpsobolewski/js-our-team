@@ -104,7 +104,28 @@ document.getElementById('button').addEventListener('click', function (e) {
 
     
 
-
+    for (let x = team.length - 1; x < team.length; x++) {
+        const member = team[x];
+    
+        console.log(member.name);
+        console.log(member.position);
+        console.log(member.photo);
+    
+        const markup =
+            `<div class="col-4 mb-5">
+            <div class="card">
+                <img src="${member.photo}">
+                <div class="card-body">
+                    <h4>${member.name}</h4>
+                    <p> ${member.position}</p>
+                </div>
+            </div>
+        </div>`
+    
+        roeElement.insertAdjacentHTML('beforeend', markup);
+    
+    
+    }
 
 
 })
