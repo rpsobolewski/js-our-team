@@ -14,7 +14,7 @@ Organizzare i singoli membri in card/schede */
 
 /**
  * 
- * @param {*} member object with name:"" position:"" photo:""
+ * @param {object} member object with name:"" position:"" photo:""
  */
 function addNewMember(member) {
     const markup =
@@ -104,22 +104,12 @@ document.getElementById('button').addEventListener('click', function (e) {
     }
 
     team.push(newMemberObject);
-    console.log(team);
-
-
     
 
-    for (let x = team.length - 1; x < team.length; x++) {
-        const member = team[x];
+
     
-        console.log(member.name);
-        console.log(member.position);
-        console.log(member.photo);
-    
-        addNewMember(member)
-    
-    
-    }
+
+    addNewMember(newMemberObject);
 
 
 })
