@@ -49,3 +49,31 @@ for (const key in team){
     console.log(key);
     console.log(team[key]);
 }
+
+
+
+const roeElement = document.querySelector('.member');
+
+
+for (let i = 0; i < team.length; i++) {
+    const member = team[i];
+
+    console.log(member.name);
+    console.log(member.position);
+    console.log(member.photo); 
+
+    const markup = 
+    `<div class="col-4 mb-5">
+        <div class="card">
+            <img src="./assets/img/${member.photo}">
+            <div class="card-body">
+                <h4>${member.name}</h4>
+                <p> ${member.position}</p>
+            </div>
+        </div>
+    </div>`
+
+    roeElement.insertAdjacentHTML('beforeend', markup);
+
+    
+}
