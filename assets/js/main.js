@@ -12,7 +12,10 @@ Organizzare i singoli membri in card/schede */
 
 
 
-
+/**
+ * 
+ * @param {*} member object with name:"" position:"" photo:""
+ */
 function addNewMember(member) {
     const markup =
         `<div class="col-4 mb-5">
@@ -93,7 +96,7 @@ document.getElementById('button').addEventListener('click', function (e) {
 
     let newMemberName = document.getElementById("newName").value;
     let newMemberPosition = document.getElementById("newPosition").value;
-    let newPhoto = "https://picsum.photos/seed/picsum/700/400";
+    let newPhoto = "https://picsum.photos/seed/picsum/700/700";
     let newMemberObject = {
         name: newMemberName,
         position: newMemberPosition,
